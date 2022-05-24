@@ -33,22 +33,23 @@
     <div class="container">
       <div class="row">
         <div class="col-12">
+
           <div class="form-group">
-            <label for="Nombres">Nombres</label>
-            <input type="text" class="form-control" id="Nombres">
+            <label for="txtName">Nombres</label>
+            <input type="text" class="form-control" id="txtName" placeholder="Agrega Nombre">
           </div>
 
           <div class="form-group">
-            <label for="Apellidos">Apellidos</label>
-            <input type="text" class="form-control" id="Apellidos">
+            <label for="txtApellido">Apellidos</label>
+            <input type="text" class="form-control" id="txtApellido" placeholder="Agrega Apellidos">
           </div>
 
           <div class="form-group">
-            <label for="Dirección ">Direccion</label>
-            <input type="text" class="form-control" id="Dirección">
+            <label for="txtAdress">Direccion</label>
+            <input type="text" class="form-control" id="txtAdress" placeholder="Agrega Direccion">
           </div>
 
-          <button type="submit" class="btn btn-primary" onclick="GuardarInfo">Save</button>
+          <button type="submit" class="btn btn-primary" onclick="guardar()">Save</button>
               
         </div>
 
@@ -63,10 +64,12 @@
               <th scope="col">Apellidos</th>
               <th scope="col">Direccion</th>
             </tr>
-          </thead>
-          <tbody id="Resultados">
+            <tbody id="PersonasGuardadas">
 
-          </tbody>
+
+              
+            </tbody>
+          </thead>
         </table>
             
       </div>

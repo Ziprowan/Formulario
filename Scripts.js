@@ -9,6 +9,7 @@ var sDireccion = "";
 //leer los datos 
 var LeerInformacion = function(){
     conversor = JSON.parse(localStorage.getItem('Fila'))
+    FilaPersona = conversor
     console.log(conversor)
     document.getElementById('PersonasGuardadas').innerHTML = ""
 

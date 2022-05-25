@@ -1,19 +1,19 @@
 var FilaPersona = [];
 var conversor = [];
 var sName = "";
-var sApellido = "";
+var sApellido = ""; 
 var sDireccion = "";
 
+// <td class="btn btn-danger" onclick="Eliminar('+ i +')">Delete</td>
 
 //leer los datos 
 var LeerInformacion = function(){
-    conversor = JSON.parse(localStorage.getItem("Fila"))
-    FilaPersona = conversor
+    conversor = JSON.parse(localStorage.getItem('Fila'))
     console.log(conversor)
-    document.getElementById("PersonasGuardadas").innerHTML = ""
+    document.getElementById('PersonasGuardadas').innerHTML = ""
 
-    for (let a = 0; a < conversor.length; a++) {
-        document.getElementById("PersonasGuardadas").innerHTML += "<tr> <td>"+ conversor[a] +"</td><td>"+ conversor[a] +"</td><td>"+ conversor[a] +"</td> <td onclick="Eliminar("+ a +")">Delete</td></tr>"
+    for (let i = 0; i < conversor.length; i++) {
+        document.getElementById('PersonasGuardadas').innerHTML += '<tr><td>'+ conversor[i].sName +'<td>'+ conversor[i].sApellido +'<td>'+ conversor[i].sDireccion +'</td><td class="btn btn-danger" onclick="Eliminar('+ i +')">Delete</td></tr>'
 
     }
 
@@ -21,13 +21,13 @@ var LeerInformacion = function(){
 
 //Guardar datos en consola y local storage
 var guardar = function(){
-    var sName = document.getElementById("txtName").value;
-    var sApellido = document.getElementById("txtApellido").value;
-    var sDireccion = document.getElementById("txtAdress").value;
+    var sName = document.getElementById('txtName').value;
+    var sApellido = document.getElementById('txtApellido').value;
+    var sDireccion = document.getElementById('txtAdress').value;
     console.log(sName,sApellido,sDireccion)
 
     FilaPersona.push({sName,sApellido,sDireccion})
-    localStorage.setItem("Fila", JSON.stringify(FilaPersona))
+    localStorage.setItem('Fila', JSON.stringify(FilaPersona))
     LeerInformacion()
 }
 
@@ -35,8 +35,9 @@ var guardar = function(){
 var Eliminar = function(indice){
     console.log(indice)
     FilaPersona.splice(indice,1)
-    localStorage.setItem("Fila", JSON.stringify(FilaPersona))
+    localStorage.setItem('Fila', JSON.stringify(FilaPersona))
     LeerInformacion()
 }
+
 
 

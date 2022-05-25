@@ -16,7 +16,6 @@ var LeerInformacion = function(){
         document.getElementById('PersonasGuardadas').innerHTML += '<tr><td>'+ conversor[i].sName +'<td>'+ conversor[i].sApellido +'<td>'+ conversor[i].sDireccion +'</td><td class="btn btn-danger" onclick="Eliminar('+ i +')">Delete</td></tr>'
 
     }
-
 }
 
 //Guardar datos en consola y local storage
@@ -39,5 +38,6 @@ var Eliminar = function(indice){
     LeerInformacion()
 }
 
+LeerInformacion()
 
 

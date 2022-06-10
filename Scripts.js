@@ -4,7 +4,6 @@ var sName = "";
 var sApellido = ""; 
 var sDireccion = "";
 
-// <td class="btn btn-danger" onclick="Eliminar('+ i +')">Delete</td>
 
 //leer los datos 
 var LeerInformacion = function(){
